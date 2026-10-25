@@ -1,0 +1,115 @@
+{
+  "source_document": "public-levia-h7-sensors-schematic-page.png",
+  "source_sha256": "6486d6f40fb34e712f3b78f516ddf2b4a864569ae2f4296c222a9a2fc06e9a9e",
+  "provider": "gemini",
+  "prompt": "Point to no more than 20 labelled features in this flight-controller sensors schematic. Prefer sensor ICs, IMU groups, barometer, magnetometer, I2C or SPI buses, voltage rails, connectors, ESD or protection parts, reference designators, sheet title, title-block fields, and uncertain labels. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "gemini_robotics_er_2",
+    "model": "gemini-robotics-er-2-preview",
+    "points": [
+      {
+        "point": [
+          260,
+          465
+        ],
+        "label": "U14 Accelerometer ICM-42688-P"
+      },
+      {
+        "point": [
+          490,
+          465
+        ],
+        "label": "U15 Accelerometer ICM-42688-P"
+      },
+      {
+        "point": [
+          260,
+          735
+        ],
+        "label": "U17 Magnetometer IST8310"
+      },
+      {
+        "point": [
+          630,
+          735
+        ],
+        "label": "U16 Barometer DPS368XTSA1"
+      },
+      {
+        "point": [
+          790,
+          465
+        ],
+        "label": "U25 Environment Sensor BME680"
+      },
+      {
+        "point": [
+          155,
+          125
+        ],
+        "label": "I2C2 bus labels"
+      },
+      {
+        "point": [
+          200,
+          125
+        ],
+        "label": "SPI1 bus labels"
+      },
+      {
+        "point": [
+          260,
+          125
+        ],
+        "label": "SPI4 bus labels"
+      },
+      {
+        "point": [
+          345,
+          125
+        ],
+        "label": "GYRO1 signals"
+      },
+      {
+        "point": [
+          386,
+          125
+        ],
+        "label": "GYRO2 signals"
+      },
+      {
+        "point": [
+          471,
+          115
+        ],
+        "label": "I2C pull-up resistors R25, R26"
+      },
+      {
+        "point": [
+          900,
+          640
+        ],
+        "label": "Sheet Title: LEVIA H7"
+      },
+      {
+        "point": [
+          844,
+          650
+        ],
+        "label": "Author & License Information"
+      },
+      {
+        "point": [
+          874,
+          650
+        ],
+        "label": "File details SENSORS.kicad_sch"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [260, 465], \"label\": \"U14 Accelerometer ICM-42688-P\"},\n  {\"point\": [490, 465], \"label\": \"U15 Accelerometer ICM-42688-P\"},\n  {\"point\": [260, 735], \"label\": \"U17 Magnetometer IST8310\"},\n  {\"point\": [630, 735], \"label\": \"U16 Barometer DPS368XTSA1\"},\n  {\"point\": [790, 465], \"label\": \"U25 Environment Sensor BME680\"},\n  {\"point\": [155, 125], \"label\": \"I2C2 bus labels\"},\n  {\"point\": [200, 125], \"label\": \"SPI1 bus labels\"},\n  {\"point\": [260, 125], \"label\": \"SPI4 bus labels\"},\n  {\"point\": [345, 125], \"label\": \"GYRO1 signals\"},\n  {\"point\": [386, 125], \"label\": \"GYRO2 signals\"},\n  {\"point\": [471, 115], \"label\": \"I2C pull-up resistors R25, R26\"},\n  {\"point\": [900, 640], \"label\": \"Sheet Title: LEVIA H7\"},\n  {\"point\": [844, 650], \"label\": \"Author & License Information\"},\n  {\"point\": [874, 650], \"label\": \"File details SENSORS.kicad_sch\"}\n]\n```"
+  },
+  "points_drawn": 14,
+  "fixture_title": "LEVIA H7 flight controller: sensors schematic",
+  "fixture_source_url": "https://github.com/piecol/LEVIA-H7/tree/8be94fc505d8a1d092da63f88e8f1194dcd7d590",
+  "fixture_license": "CERN-OHL-S-2.0"
+}

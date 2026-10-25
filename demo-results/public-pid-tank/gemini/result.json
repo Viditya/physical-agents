@@ -1,0 +1,45 @@
+{
+  "source_document": "public-pid-tank.png",
+  "source_sha256": "a7e0f599cd4ea7f3f129cde79e808dca788413aaccc6ad9a9ec214bfa38a6808",
+  "provider": "gemini",
+  "prompt": "Point to the tank, the steam-heating control loop, and the outlet flow-control loop. Label the downstream outlet control valve clearly. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "gemini_robotics_er_2",
+    "model": "gemini-robotics-er-2-preview",
+    "points": [
+      {
+        "point": [
+          400,
+          575
+        ],
+        "label": "tank"
+      },
+      {
+        "point": [
+          168,
+          233
+        ],
+        "label": "steam-heating control loop"
+      },
+      {
+        "point": [
+          474,
+          796
+        ],
+        "label": "outlet flow-control loop"
+      },
+      {
+        "point": [
+          595,
+          775
+        ],
+        "label": "downstream outlet control valve"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [400, 575], \"label\": \"tank\"},\n  {\"point\": [168, 233], \"label\": \"steam-heating control loop\"},\n  {\"point\": [474, 796], \"label\": \"outlet flow-control loop\"},\n  {\"point\": [595, 775], \"label\": \"downstream outlet control valve\"}\n]\n```"
+  },
+  "points_drawn": 4,
+  "fixture_title": "P&ID tank",
+  "fixture_source_url": "https://commons.wikimedia.org/wiki/File:PID-Tank.svg",
+  "fixture_license": "CC BY-SA 2.5"
+}

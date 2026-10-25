@@ -1,0 +1,45 @@
+{
+  "source_document": "public-nasa-engineering-drawing-symbols-page.png",
+  "source_sha256": "161117b714efd40d3afe0770f060e1e83d39d5e2c2f8a9bead244f5e0bdde614",
+  "provider": "magma",
+  "prompt": "Point to the sheet or zone locator symbol, the flag note symbol, the find-number or quantity symbol, and the view-title symbol. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "fixture_source_url": "https://ntrs.nasa.gov/citations/20205010487",
+  "fixture_license": "Work of the U.S. Government; public use permitted",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [200, 350], \"label\": \"Sheet/Zone Locator\"},\n  {\"point\": [200, 850], \"label\": \"Flag Note\"},\n  {\"point\": [600, 350], \"label\": \"Find Number/Quantity\"},\n  {\"point\": [600, 850], \"label\": \"View Title\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          200,
+          350
+        ],
+        "label": "Sheet/Zone Locator"
+      },
+      {
+        "point": [
+          200,
+          850
+        ],
+        "label": "Flag Note"
+      },
+      {
+        "point": [
+          600,
+          350
+        ],
+        "label": "Find Number/Quantity"
+      },
+      {
+        "point": [
+          600,
+          850
+        ],
+        "label": "View Title"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [200, 350], \"label\": \"Sheet/Zone Locator\"},\n  {\"point\": [200, 850], \"label\": \"Flag Note\"},\n  {\"point\": [600, 350], \"label\": \"Find Number/Quantity\"},\n  {\"point\": [600, 850], \"label\": \"View Title\"}\n]\n```"
+  },
+  "points_drawn": 4
+}

@@ -1,0 +1,45 @@
+{
+  "source_document": "public-nasa-engineering-drawing-symbols-page.png",
+  "source_sha256": "161117b714efd40d3afe0770f060e1e83d39d5e2c2f8a9bead244f5e0bdde614",
+  "provider": "gemini",
+  "prompt": "Point to the sheet or zone locator symbol, the flag note symbol, the find-number or quantity symbol, and the view-title symbol. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "gemini_robotics_er_2",
+    "model": "gemini-robotics-er-2-preview",
+    "points": [
+      {
+        "point": [
+          220,
+          230
+        ],
+        "label": "sheet or zone locator symbol"
+      },
+      {
+        "point": [
+          215,
+          690
+        ],
+        "label": "flag note symbol"
+      },
+      {
+        "point": [
+          430,
+          305
+        ],
+        "label": "find-number or quantity symbol"
+      },
+      {
+        "point": [
+          440,
+          690
+        ],
+        "label": "view-title symbol"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [220, 230], \"label\": \"sheet or zone locator symbol\"},\n  {\"point\": [215, 690], \"label\": \"flag note symbol\"},\n  {\"point\": [430, 305], \"label\": \"find-number or quantity symbol\"},\n  {\"point\": [440, 690], \"label\": \"view-title symbol\"}\n]\n```"
+  },
+  "points_drawn": 4,
+  "fixture_title": "KSC-GP-435 Volume I: Engineering Drawing Practices, Appendix A symbols",
+  "fixture_source_url": "https://ntrs.nasa.gov/citations/20205010487",
+  "fixture_license": "Work of the U.S. Government; public use permitted"
+}

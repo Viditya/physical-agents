@@ -1,0 +1,158 @@
+{
+  "source_document": "public-levia-h7-sensors-schematic-page.png",
+  "source_sha256": "6486d6f40fb34e712f3b78f516ddf2b4a864569ae2f4296c222a9a2fc06e9a9e",
+  "provider": "magma",
+  "fixture_title": "LEVIA H7 flight controller: sensors schematic",
+  "fixture_source_url": "https://github.com/piecol/LEVIA-H7/tree/8be94fc505d8a1d092da63f88e8f1194dcd7d590",
+  "fixture_license": "CERN-OHL-S-2.0",
+  "prompt": "Point to no more than 20 labelled features in this flight-controller sensors schematic. Prefer sensor ICs, IMU groups, barometer, magnetometer, I2C or SPI buses, voltage rails, connectors, ESD or protection parts, reference designators, sheet title, title-block fields, and uncertain labels. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [100, 200], \"label\": \"I2C2.SCL\"},\n  {\"point\": [100, 300], \"label\": \"I2C2.SDA\"},\n  {\"point\": [150, 200], \"label\": \"SPI1.SCK\"},\n  {\"point\": [150, 300], \"label\": \"SPI1.MOSI\"},\n  {\"point\": [150, 400], \"label\": \"SPI1.MISO\"},\n  {\"point\": [150, 500], \"label\": \"SPI1.CS\"},\n  {\"point\": [200, 400], \"label\": \"CLKIN_1\"},\n  {\"point\": [200, 600], \"label\": \"CLKIN_2\"},\n  {\"point\": [350, 225], \"label\": \"ICM-20608-P\"},\n  {\"point\": [350, 250], \"label\": \"Reference designators for accelerometer\"},\n  {\"point\": [600, 225], \"label\": \"ISD8310 Magnetometer\"},\n  {\"point\": [600, 250], \"label\": \"Reference designators for magnetometer\"},\n  {\"point\": [800, 225], \"label\": \"DPS368XTSA Barometer\"},\n  {\"point\": [800, 250], \"label\": \"Reference designators for barometer\"},\n  {\"point\": [900, 400], \"label\": \"+3V3.SENS\"},\n  {\"point\": [900, 450], \"label\": \"ENV Sensor\"},\n  {\"point\": [950, 300], \"label\": \"I2C2.SCL ENV\"},\n  {\"point\": [950, 350], \"label\": \"I2C2.SDA ENV\"},\n  {\"point\": [975, 650], \"label\": \"Title Block: Title: LEVIA H7\"},\n  {\"point\": [975, 750], \"label\": \"Title Block: Rev: 0.1-prelayout\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          100,
+          200
+        ],
+        "label": "I2C2.SCL"
+      },
+      {
+        "point": [
+          100,
+          300
+        ],
+        "label": "I2C2.SDA"
+      },
+      {
+        "point": [
+          150,
+          200
+        ],
+        "label": "SPI1.SCK"
+      },
+      {
+        "point": [
+          150,
+          300
+        ],
+        "label": "SPI1.MOSI"
+      },
+      {
+        "point": [
+          150,
+          400
+        ],
+        "label": "SPI1.MISO"
+      },
+      {
+        "point": [
+          150,
+          500
+        ],
+        "label": "SPI1.CS"
+      },
+      {
+        "point": [
+          200,
+          400
+        ],
+        "label": "CLKIN_1"
+      },
+      {
+        "point": [
+          200,
+          600
+        ],
+        "label": "CLKIN_2"
+      },
+      {
+        "point": [
+          350,
+          225
+        ],
+        "label": "ICM-20608-P"
+      },
+      {
+        "point": [
+          350,
+          250
+        ],
+        "label": "Reference designators for accelerometer"
+      },
+      {
+        "point": [
+          600,
+          225
+        ],
+        "label": "ISD8310 Magnetometer"
+      },
+      {
+        "point": [
+          600,
+          250
+        ],
+        "label": "Reference designators for magnetometer"
+      },
+      {
+        "point": [
+          800,
+          225
+        ],
+        "label": "DPS368XTSA Barometer"
+      },
+      {
+        "point": [
+          800,
+          250
+        ],
+        "label": "Reference designators for barometer"
+      },
+      {
+        "point": [
+          900,
+          400
+        ],
+        "label": "+3V3.SENS"
+      },
+      {
+        "point": [
+          900,
+          450
+        ],
+        "label": "ENV Sensor"
+      },
+      {
+        "point": [
+          950,
+          300
+        ],
+        "label": "I2C2.SCL ENV"
+      },
+      {
+        "point": [
+          950,
+          350
+        ],
+        "label": "I2C2.SDA ENV"
+      },
+      {
+        "point": [
+          975,
+          650
+        ],
+        "label": "Title Block: Title: LEVIA H7"
+      },
+      {
+        "point": [
+          975,
+          750
+        ],
+        "label": "Title Block: Rev: 0.1-prelayout"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [100, 200], \"label\": \"I2C2.SCL\"},\n  {\"point\": [100, 300], \"label\": \"I2C2.SDA\"},\n  {\"point\": [150, 200], \"label\": \"SPI1.SCK\"},\n  {\"point\": [150, 300], \"label\": \"SPI1.MOSI\"},\n  {\"point\": [150, 400], \"label\": \"SPI1.MISO\"},\n  {\"point\": [150, 500], \"label\": \"SPI1.CS\"},\n  {\"point\": [200, 400], \"label\": \"CLKIN_1\"},\n  {\"point\": [200, 600], \"label\": \"CLKIN_2\"},\n  {\"point\": [350, 225], \"label\": \"ICM-20608-P\"},\n  {\"point\": [350, 250], \"label\": \"Reference designators for accelerometer\"},\n  {\"point\": [600, 225], \"label\": \"ISD8310 Magnetometer\"},\n  {\"point\": [600, 250], \"label\": \"Reference designators for magnetometer\"},\n  {\"point\": [800, 225], \"label\": \"DPS368XTSA Barometer\"},\n  {\"point\": [800, 250], \"label\": \"Reference designators for barometer\"},\n  {\"point\": [900, 400], \"label\": \"+3V3.SENS\"},\n  {\"point\": [900, 450], \"label\": \"ENV Sensor\"},\n  {\"point\": [950, 300], \"label\": \"I2C2.SCL ENV\"},\n  {\"point\": [950, 350], \"label\": \"I2C2.SDA ENV\"},\n  {\"point\": [975, 650], \"label\": \"Title Block: Title: LEVIA H7\"},\n  {\"point\": [975, 750], \"label\": \"Title Block: Rev: 0.1-prelayout\"}\n]\n```"
+  },
+  "points_drawn": 20
+}

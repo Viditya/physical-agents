@@ -1,0 +1,7 @@
+google-genai
+openai
+python-dotenv
+flask
+pymupdf
+pillow
+pytest

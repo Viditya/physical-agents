@@ -1,0 +1,45 @@
+{
+  "source_document": "public-pid-tank.png",
+  "source_sha256": "a7e0f599cd4ea7f3f129cde79e808dca788413aaccc6ad9a9ec214bfa38a6808",
+  "provider": "magma",
+  "prompt": "Point to the tank, the steam-heating control loop, and the outlet flow-control loop. Label the downstream outlet control valve clearly. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "fixture_source_url": "https://commons.wikimedia.org/wiki/File:PID-Tank.svg",
+  "fixture_license": "CC BY-SA 2.5",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [500, 700], \"label\": \"tank\"},\n  {\"point\": [350, 400], \"label\": \"steam loop\"},\n  {\"point\": [550, 1100], \"label\": \"outlet loop\"},\n  {\"point\": [550, 1050], \"label\": \"outlet valve\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          500,
+          700
+        ],
+        "label": "tank"
+      },
+      {
+        "point": [
+          350,
+          400
+        ],
+        "label": "steam loop"
+      },
+      {
+        "point": [
+          550,
+          1100
+        ],
+        "label": "outlet loop"
+      },
+      {
+        "point": [
+          550,
+          1050
+        ],
+        "label": "outlet valve"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [500, 700], \"label\": \"tank\"},\n  {\"point\": [350, 400], \"label\": \"steam loop\"},\n  {\"point\": [550, 1100], \"label\": \"outlet loop\"},\n  {\"point\": [550, 1050], \"label\": \"outlet valve\"}\n]\n```"
+  },
+  "points_drawn": 4
+}

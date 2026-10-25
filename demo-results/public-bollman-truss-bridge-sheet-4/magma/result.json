@@ -1,0 +1,151 @@
+{
+  "source_document": "public-bollman-truss-bridge-sheet-4.jpg",
+  "source_sha256": "76b4da39eeb2d154107024d27a152fa437e3363210665660dda4b9fa16e45d58",
+  "provider": "magma",
+  "fixture_title": "Bollman Truss Railroad Bridge: floor system and linkage suspension",
+  "fixture_source_url": "https://www.loc.gov/resource/hhh.md0583.sheet/?sp=4",
+  "fixture_license": "Library of Congress record: No known restrictions on publication.",
+  "prompt": "Point to no more than 20 labelled features in this structural bridge drawing. Prefer the title block, bridge or truss type, top chord, bottom chord, vertical member, diagonal member, suspension link, pin joint, floor beam, stringer, deck, bearing, cross section, detail view, dimension chain, member labels, material notes, rivet or fastener notation, scale, and uncertain text. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [50, 500], \"label\": \"title block\"},\n  {\"point\": [200, 800], \"label\": \"scale\"},\n  {\"point\": [100, 500], \"label\": \"truss type\"},\n  {\"point\": [300, 250], \"label\": \"top chord\"},\n  {\"point\": [400, 250], \"label\": \"bottom chord\"},\n  {\"point\": [350, 300], \"label\": \"vertical member\"},\n  {\"point\": [600, 250], \"label\": \"diagonal member\"},\n  {\"point\": [500, 300], \"label\": \"pin joint\"},\n  {\"point\": [700, 500], \"label\": \"deck\"},\n  {\"point\": [600, 500], \"label\": \"floor beam\"},\n  {\"point\": [650, 600], \"label\": \"stringer\"},\n  {\"point\": [750, 400], \"label\": \"bearing\"},\n  {\"point\": [900, 450], \"label\": \"dimension chain\"},\n  {\"point\": [500, 700], \"label\": \"material notes\"},\n  {\"point\": [800, 600], \"label\": \"rivet or fastener notation\"},\n  {\"point\": [300, 700], \"label\": \"member labels\"},\n  {\"point\": [100, 600], \"label\": \"uncertain text\"},\n  {\"point\": [100, 800], \"label\": \"detail view\"},\n  {\"point\": [450, 850], \"label\": \"cross section\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          50,
+          500
+        ],
+        "label": "title block"
+      },
+      {
+        "point": [
+          200,
+          800
+        ],
+        "label": "scale"
+      },
+      {
+        "point": [
+          100,
+          500
+        ],
+        "label": "truss type"
+      },
+      {
+        "point": [
+          300,
+          250
+        ],
+        "label": "top chord"
+      },
+      {
+        "point": [
+          400,
+          250
+        ],
+        "label": "bottom chord"
+      },
+      {
+        "point": [
+          350,
+          300
+        ],
+        "label": "vertical member"
+      },
+      {
+        "point": [
+          600,
+          250
+        ],
+        "label": "diagonal member"
+      },
+      {
+        "point": [
+          500,
+          300
+        ],
+        "label": "pin joint"
+      },
+      {
+        "point": [
+          700,
+          500
+        ],
+        "label": "deck"
+      },
+      {
+        "point": [
+          600,
+          500
+        ],
+        "label": "floor beam"
+      },
+      {
+        "point": [
+          650,
+          600
+        ],
+        "label": "stringer"
+      },
+      {
+        "point": [
+          750,
+          400
+        ],
+        "label": "bearing"
+      },
+      {
+        "point": [
+          900,
+          450
+        ],
+        "label": "dimension chain"
+      },
+      {
+        "point": [
+          500,
+          700
+        ],
+        "label": "material notes"
+      },
+      {
+        "point": [
+          800,
+          600
+        ],
+        "label": "rivet or fastener notation"
+      },
+      {
+        "point": [
+          300,
+          700
+        ],
+        "label": "member labels"
+      },
+      {
+        "point": [
+          100,
+          600
+        ],
+        "label": "uncertain text"
+      },
+      {
+        "point": [
+          100,
+          800
+        ],
+        "label": "detail view"
+      },
+      {
+        "point": [
+          450,
+          850
+        ],
+        "label": "cross section"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [50, 500], \"label\": \"title block\"},\n  {\"point\": [200, 800], \"label\": \"scale\"},\n  {\"point\": [100, 500], \"label\": \"truss type\"},\n  {\"point\": [300, 250], \"label\": \"top chord\"},\n  {\"point\": [400, 250], \"label\": \"bottom chord\"},\n  {\"point\": [350, 300], \"label\": \"vertical member\"},\n  {\"point\": [600, 250], \"label\": \"diagonal member\"},\n  {\"point\": [500, 300], \"label\": \"pin joint\"},\n  {\"point\": [700, 500], \"label\": \"deck\"},\n  {\"point\": [600, 500], \"label\": \"floor beam\"},\n  {\"point\": [650, 600], \"label\": \"stringer\"},\n  {\"point\": [750, 400], \"label\": \"bearing\"},\n  {\"point\": [900, 450], \"label\": \"dimension chain\"},\n  {\"point\": [500, 700], \"label\": \"material notes\"},\n  {\"point\": [800, 600], \"label\": \"rivet or fastener notation\"},\n  {\"point\": [300, 700], \"label\": \"member labels\"},\n  {\"point\": [100, 600], \"label\": \"uncertain text\"},\n  {\"point\": [100, 800], \"label\": \"detail view\"},\n  {\"point\": [450, 850], \"label\": \"cross section\"}\n]\n```"
+  },
+  "points_drawn": 19
+}

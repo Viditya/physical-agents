@@ -1,0 +1,38 @@
+{
+  "source_document": "public-technical-drawing-templates-iso-5457.pdf",
+  "source_sha256": "67f2055b6606910acc5137485193d45c2cd06b5695f5e822086c75c341caf18b",
+  "provider": "magma",
+  "prompt": "Point to the drawing border, the title-block region, and the revision area. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "fixture_source_url": "https://commons.wikimedia.org/wiki/File:Technical_drawing_templates_(ISO_5457_1999_Sizes_A0-A4).pdf",
+  "fixture_license": "CC0 1.0 Universal",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [500, 10], \"label\": \"border\"},\n  {\"point\": [950, 800], \"label\": \"title-block\"},\n  {\"point\": [50, 950], \"label\": \"revision\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          500,
+          10
+        ],
+        "label": "border"
+      },
+      {
+        "point": [
+          950,
+          800
+        ],
+        "label": "title-block"
+      },
+      {
+        "point": [
+          50,
+          950
+        ],
+        "label": "revision"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [500, 10], \"label\": \"border\"},\n  {\"point\": [950, 800], \"label\": \"title-block\"},\n  {\"point\": [50, 950], \"label\": \"revision\"}\n]\n```"
+  },
+  "points_drawn": 3
+}

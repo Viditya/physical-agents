@@ -1,0 +1,78 @@
+{
+  "fixtures": [
+    {
+      "file": "OCR/public-technical-drawing-templates-iso-5457.pdf",
+      "title": "Technical drawing templates (ISO 5457:1999 sizes A0-A4)",
+      "discipline": "engineering drawing layout",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Technical_drawing_templates_(ISO_5457_1999_Sizes_A0-A4).pdf",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Technical_drawing_templates_%28ISO_5457_1999_Sizes_A0-A4%29.pdf",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved_on": "2026-09-24",
+      "modification": "Used page 1 through the demo PDF rasterization path.",
+      "prompt": "Point to the drawing border, the title-block region, and the revision area. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    },
+    {
+      "file": "OCR/public-pid-tank.png",
+      "title": "P&ID tank",
+      "discipline": "process engineering",
+      "source_url": "https://commons.wikimedia.org/wiki/File:PID-Tank.svg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PID-Tank.svg?width=1600",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "attribution": "Wikimedia Commons file 'PID-Tank.svg'; retain attribution, licence link, change notice, and ShareAlike terms for redistributions.",
+      "retrieved_on": "2026-09-24",
+      "modification": "Downloaded Wikimedia raster preview of the original SVG at 1600px width.",
+      "prompt": "Point to the tank, the steam-heating control loop, and the outlet flow-control loop. Label the downstream outlet control valve clearly. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    },
+    {
+      "file": "OCR/public-nasa-engineering-drawing-symbols-page.png",
+      "title": "KSC-GP-435 Volume I: Engineering Drawing Practices, Appendix A symbols",
+      "discipline": "aerospace and mechanical engineering drawing practices",
+      "source_url": "https://ntrs.nasa.gov/citations/20205010487",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20205010487/downloads/KSC-GP-435_Vol1_RevH-Final-Signed.pdf",
+      "license": "Work of the U.S. Government; public use permitted",
+      "retrieved_on": "2026-09-24",
+      "modification": "Rendered page 40 (Appendix A symbols) of the source PDF to PNG at 2x PDF resolution.",
+      "notice": "Do not imply NASA endorsement. Follow current NASA media and AI guidance when presenting or redistributing.",
+      "prompt": "Point to the sheet or zone locator symbol, the flag note symbol, the find-number or quantity symbol, and the view-title symbol. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    },
+    {
+      "file": "OCR/public-levia-h7-sensors-schematic-page.png",
+      "title": "LEVIA H7 flight controller: sensors schematic",
+      "discipline": "electrical and PCB engineering",
+      "source_url": "https://github.com/piecol/LEVIA-H7/tree/8be94fc505d8a1d092da63f88e8f1194dcd7d590",
+      "download_url": "https://raw.githubusercontent.com/piecol/LEVIA-H7/8be94fc505d8a1d092da63f88e8f1194dcd7d590/LEVIA_H7.pdf",
+      "license": "CERN-OHL-S-2.0",
+      "license_file": "fixtures/CERN-OHL-S-2.0-LEVIA-LICENSE.txt",
+      "attribution": "LEVIA H7 hardware design by Pierluigi Colangeli; retain CERN-OHL-S notices and source-location information when conveying the design.",
+      "retrieved_on": "2026-09-25",
+      "modification": "Rendered page 7 (Sensors) of the source PDF to PNG at 2x PDF resolution.",
+      "prompt": "Point to no more than 20 labelled features in this flight-controller sensors schematic. Prefer sensor ICs, IMU groups, barometer, magnetometer, I2C or SPI buses, voltage rails, connectors, ESD or protection parts, reference designators, sheet title, title-block fields, and uncertain labels. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    },
+    {
+      "file": "OCR/public-titan-i-missile-complex-sheet-3.jpg",
+      "title": "Titan I Missile Complex 3: cutaway axonometric and control-center section",
+      "discipline": "structural, mechanical, and architectural engineering",
+      "source_url": "https://www.loc.gov/resource/hhh.co0919.sheet/?sp=3",
+      "download_url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/co/co0900/co0919/sheet/00003v.jpg",
+      "rights_advisory": "Library of Congress record: No known restrictions on publication.",
+      "attribution": "Library of Congress, Historic American Engineering Record, Titan I Missile Complex 3, sheet 3; preserve source record and rights advisory.",
+      "retrieved_on": "2026-09-25",
+      "notice": "Do not imply Library of Congress endorsement.",
+      "prompt": "Point to no more than 20 labelled features in this cutaway engineering drawing. Prefer the title block, drawing scale, cutaway boundary, surface grade, access portal, launch-control center, equipment rooms, corridor or tunnel, blast door, stair, elevator or shaft, cable or conduit route, ventilation duct, structural wall, slab or floor, section callout, elevation marker, dimensions, room identifiers, and uncertain annotations. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    },
+    {
+      "file": "OCR/public-bollman-truss-bridge-sheet-4.jpg",
+      "title": "Bollman Truss Railroad Bridge: floor system and linkage suspension",
+      "discipline": "structural and civil engineering",
+      "source_url": "https://www.loc.gov/resource/hhh.md0583.sheet/?sp=4",
+      "download_url": "https://tile.loc.gov/storage-services/service/pnp/habshaer/md/md0500/md0583/sheet/00004v.jpg",
+      "rights_advisory": "Library of Congress record: No known restrictions on publication.",
+      "attribution": "Library of Congress, Historic American Engineering Record, Bollman Truss Railroad Bridge, sheet 4; preserve source record and rights advisory.",
+      "retrieved_on": "2026-09-25",
+      "notice": "Do not imply Library of Congress endorsement.",
+      "prompt": "Point to no more than 20 labelled features in this structural bridge drawing. Prefer the title block, bridge or truss type, top chord, bottom chord, vertical member, diagonal member, suspension link, pin joint, floor beam, stringer, deck, bearing, cross section, detail view, dimension chain, member labels, material notes, rivet or fastener notation, scale, and uncertain text. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "source_document": "public-titan-i-missile-complex-sheet-3.jpg",
+  "source_sha256": "4787fb87b87cf4cba031917b991ee61b144e0107a082cfb18f5e8ecf2dbcc3e4",
+  "provider": "gemini",
+  "prompt": "Point to no more than 20 labelled features in this cutaway engineering drawing. Prefer the title block, drawing scale, cutaway boundary, surface grade, access portal, launch-control center, equipment rooms, corridor or tunnel, blast door, stair, elevator or shaft, cable or conduit route, ventilation duct, structural wall, slab or floor, section callout, elevation marker, dimensions, room identifiers, and uncertain annotations. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "gemini_robotics_er_2",
+    "model": "gemini-robotics-er-2-preview",
+    "points": [
+      {
+        "point": [
+          301,
+          145
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          875,
+          784
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          853,
+          356
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          390,
+          431
+        ],
+        "label": "room identifier"
+      },
+      {
+        "point": [
+          528,
+          578
+        ],
+        "label": "room identifier"
+      },
+      {
+        "point": [
+          346,
+          526
+        ],
+        "label": "access portal"
+      },
+      {
+        "point": [
+          159,
+          182
+        ],
+        "label": "room identifier"
+      },
+      {
+        "point": [
+          222,
+          152
+        ],
+        "label": "room identifier"
+      },
+      {
+        "point": [
+          209,
+          202
+        ],
+        "label": "corridor or tunnel"
+      },
+      {
+        "point": [
+          164,
+          308
+        ],
+        "label": "room identifier"
+      },
+      {
+        "point": [
+          321,
+          281
+        ],
+        "label": "drawing scale"
+      },
+      {
+        "point": [
+          913,
+          829
+        ],
+        "label": "drawing scale"
+      },
+      {
+        "point": [
+          898,
+          357
+        ],
+        "label": "drawing scale"
+      },
+      {
+        "point": [
+          667,
+          131
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          887,
+          142
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          841,
+          474
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          54,
+          680
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          178,
+          749
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          516,
+          961
+        ],
+        "label": "title block"
+      },
+      {
+        "point": [
+          141,
+          407
+        ],
+        "label": "dimensions"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [301, 145], \"label\": \"section callout\"},\n  {\"point\": [875, 784], \"label\": \"section callout\"},\n  {\"point\": [853, 356], \"label\": \"section callout\"},\n  {\"point\": [390, 431], \"label\": \"room identifier\"},\n  {\"point\": [528, 578], \"label\": \"room identifier\"},\n  {\"point\": [346, 526], \"label\": \"access portal\"},\n  {\"point\": [159, 182], \"label\": \"room identifier\"},\n  {\"point\": [222, 152], \"label\": \"room identifier\"},\n  {\"point\": [209, 202], \"label\": \"corridor or tunnel\"},\n  {\"point\": [164, 308], \"label\": \"room identifier\"},\n  {\"point\": [321, 281], \"label\": \"drawing scale\"},\n  {\"point\": [913, 829], \"label\": \"drawing scale\"},\n  {\"point\": [898, 357], \"label\": \"drawing scale\"},\n  {\"point\": [667, 131], \"label\": \"section callout\"},\n  {\"point\": [887, 142], \"label\": \"section callout\"},\n  {\"point\": [841, 474], \"label\": \"section callout\"},\n  {\"point\": [54, 680], \"label\": \"section callout\"},\n  {\"point\": [178, 749], \"label\": \"section callout\"},\n  {\"point\": [516, 961], \"label\": \"title block\"},\n  {\"point\": [141, 407], \"label\": \"dimensions\"}\n]\n```"
+  },
+  "points_drawn": 20,
+  "fixture_title": "Titan I Missile Complex 3: cutaway axonometric and control-center section",
+  "fixture_source_url": "https://www.loc.gov/resource/hhh.co0919.sheet/?sp=3",
+  "fixture_license": "Library of Congress record: No known restrictions on publication."
+}

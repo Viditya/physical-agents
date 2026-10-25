@@ -1,0 +1,158 @@
+{
+  "source_document": "public-titan-i-missile-complex-sheet-3.jpg",
+  "source_sha256": "4787fb87b87cf4cba031917b991ee61b144e0107a082cfb18f5e8ecf2dbcc3e4",
+  "provider": "magma",
+  "fixture_title": "Titan I Missile Complex 3: cutaway axonometric and control-center section",
+  "fixture_source_url": "https://www.loc.gov/resource/hhh.co0919.sheet/?sp=3",
+  "fixture_license": "Library of Congress record: No known restrictions on publication.",
+  "prompt": "Point to no more than 20 labelled features in this cutaway engineering drawing. Prefer the title block, drawing scale, cutaway boundary, surface grade, access portal, launch-control center, equipment rooms, corridor or tunnel, blast door, stair, elevator or shaft, cable or conduit route, ventilation duct, structural wall, slab or floor, section callout, elevation marker, dimensions, room identifiers, and uncertain annotations. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "azure_ai_foundry_vision",
+    "deployment": "4Omni",
+    "description": "```json\n[\n  {\"point\": [100, 80], \"label\": \"title block\"},\n  {\"point\": [920, 800], \"label\": \"drawing scale\"},\n  {\"point\": [350, 140], \"label\": \"cutaway boundary\"},\n  {\"point\": [600, 780], \"label\": \"surface grade\"},\n  {\"point\": [560, 300], \"label\": \"access portal\"},\n  {\"point\": [530, 830], \"label\": \"launch-control center\"},\n  {\"point\": [550, 500], \"label\": \"equipment rooms\"},\n  {\"point\": [720, 620], \"label\": \"corridor or tunnel\"},\n  {\"point\": [360, 750], \"label\": \"blast door\"},\n  {\"point\": [480, 200], \"label\": \"stair\"},\n  {\"point\": [400, 450], \"label\": \"elevator or shaft\"},\n  {\"point\": [640, 520], \"label\": \"cable or conduit route\"},\n  {\"point\": [540, 600], \"label\": \"ventilation duct\"},\n  {\"point\": [500, 400], \"label\": \"structural wall\"},\n  {\"point\": [770, 380], \"label\": \"slab or floor\"},\n  {\"point\": [350, 850], \"label\": \"section callout\"},\n  {\"point\": [940, 680], \"label\": \"elevation marker\"},\n  {\"point\": [780, 80], \"label\": \"dimensions\"},\n  {\"point\": [580, 480], \"label\": \"room identifiers\"},\n  {\"point\": [620, 230], \"label\": \"uncertain annotations\"}\n]\n```",
+    "points": [
+      {
+        "point": [
+          100,
+          80
+        ],
+        "label": "title block"
+      },
+      {
+        "point": [
+          920,
+          800
+        ],
+        "label": "drawing scale"
+      },
+      {
+        "point": [
+          350,
+          140
+        ],
+        "label": "cutaway boundary"
+      },
+      {
+        "point": [
+          600,
+          780
+        ],
+        "label": "surface grade"
+      },
+      {
+        "point": [
+          560,
+          300
+        ],
+        "label": "access portal"
+      },
+      {
+        "point": [
+          530,
+          830
+        ],
+        "label": "launch-control center"
+      },
+      {
+        "point": [
+          550,
+          500
+        ],
+        "label": "equipment rooms"
+      },
+      {
+        "point": [
+          720,
+          620
+        ],
+        "label": "corridor or tunnel"
+      },
+      {
+        "point": [
+          360,
+          750
+        ],
+        "label": "blast door"
+      },
+      {
+        "point": [
+          480,
+          200
+        ],
+        "label": "stair"
+      },
+      {
+        "point": [
+          400,
+          450
+        ],
+        "label": "elevator or shaft"
+      },
+      {
+        "point": [
+          640,
+          520
+        ],
+        "label": "cable or conduit route"
+      },
+      {
+        "point": [
+          540,
+          600
+        ],
+        "label": "ventilation duct"
+      },
+      {
+        "point": [
+          500,
+          400
+        ],
+        "label": "structural wall"
+      },
+      {
+        "point": [
+          770,
+          380
+        ],
+        "label": "slab or floor"
+      },
+      {
+        "point": [
+          350,
+          850
+        ],
+        "label": "section callout"
+      },
+      {
+        "point": [
+          940,
+          680
+        ],
+        "label": "elevation marker"
+      },
+      {
+        "point": [
+          780,
+          80
+        ],
+        "label": "dimensions"
+      },
+      {
+        "point": [
+          580,
+          480
+        ],
+        "label": "room identifiers"
+      },
+      {
+        "point": [
+          620,
+          230
+        ],
+        "label": "uncertain annotations"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [100, 80], \"label\": \"title block\"},\n  {\"point\": [920, 800], \"label\": \"drawing scale\"},\n  {\"point\": [350, 140], \"label\": \"cutaway boundary\"},\n  {\"point\": [600, 780], \"label\": \"surface grade\"},\n  {\"point\": [560, 300], \"label\": \"access portal\"},\n  {\"point\": [530, 830], \"label\": \"launch-control center\"},\n  {\"point\": [550, 500], \"label\": \"equipment rooms\"},\n  {\"point\": [720, 620], \"label\": \"corridor or tunnel\"},\n  {\"point\": [360, 750], \"label\": \"blast door\"},\n  {\"point\": [480, 200], \"label\": \"stair\"},\n  {\"point\": [400, 450], \"label\": \"elevator or shaft\"},\n  {\"point\": [640, 520], \"label\": \"cable or conduit route\"},\n  {\"point\": [540, 600], \"label\": \"ventilation duct\"},\n  {\"point\": [500, 400], \"label\": \"structural wall\"},\n  {\"point\": [770, 380], \"label\": \"slab or floor\"},\n  {\"point\": [350, 850], \"label\": \"section callout\"},\n  {\"point\": [940, 680], \"label\": \"elevation marker\"},\n  {\"point\": [780, 80], \"label\": \"dimensions\"},\n  {\"point\": [580, 480], \"label\": \"room identifiers\"},\n  {\"point\": [620, 230], \"label\": \"uncertain annotations\"}\n]\n```"
+  },
+  "points_drawn": 20
+}

@@ -1,0 +1,38 @@
+{
+  "source_document": "public-technical-drawing-templates-iso-5457.pdf",
+  "source_sha256": "67f2055b6606910acc5137485193d45c2cd06b5695f5e822086c75c341caf18b",
+  "provider": "gemini",
+  "prompt": "Point to the drawing border, the title-block region, and the revision area. Return only a JSON array in this format: [{\"point\": [y, x], \"label\": \"short label\"}]. Points are normalized to 0-1000.",
+  "result": {
+    "provider": "gemini_robotics_er_2",
+    "model": "gemini-robotics-er-2-preview",
+    "points": [
+      {
+        "point": [
+          500,
+          13
+        ],
+        "label": "drawing border"
+      },
+      {
+        "point": [
+          950,
+          950
+        ],
+        "label": "title-block region"
+      },
+      {
+        "point": [
+          50,
+          950
+        ],
+        "label": "revision area"
+      }
+    ],
+    "raw_text": "```json\n[\n  {\"point\": [500, 13], \"label\": \"drawing border\"},\n  {\"point\": [950, 950], \"label\": \"title-block region\"},\n  {\"point\": [50, 950], \"label\": \"revision area\"}\n]\n```"
+  },
+  "points_drawn": 3,
+  "fixture_title": "Technical drawing templates (ISO 5457:1999 sizes A0-A4)",
+  "fixture_source_url": "https://commons.wikimedia.org/wiki/File:Technical_drawing_templates_(ISO_5457_1999_Sizes_A0-A4).pdf",
+  "fixture_license": "CC0 1.0 Universal"
+}
