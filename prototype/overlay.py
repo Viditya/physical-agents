@@ -8,6 +8,8 @@ own, so this renders them as labelled markers on top of the image -- the
 
 from __future__ import annotations
 
+import math
+
 from PIL import Image, ImageDraw, ImageFont
 
 COORDINATE_SCALE = 1000.0
@@ -38,8 +40,16 @@ def _to_pixels(point: list, width: int, height: int) -> tuple[int, int] | None:
         return None
     try:
         y_normalised, x_normalised = float(point[0]), float(point[1])
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, OverflowError):
         return None
+
+    if not math.isfinite(y_normalised) or not math.isfinite(x_normalised):
+        return None
+
+    # Clamp on the normalized grid first: scaling a finite but extreme
+    # model value by the image dimensions can itself overflow to infinity.
+    x_normalised = max(0.0, min(COORDINATE_SCALE, x_normalised))
+    y_normalised = max(0.0, min(COORDINATE_SCALE, y_normalised))
 
     x = int(x_normalised / COORDINATE_SCALE * width)
     y = int(y_normalised / COORDINATE_SCALE * height)

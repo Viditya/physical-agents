@@ -17,6 +17,24 @@ Research and prototype harness for evaluating vision-spatial AI (Gemini Robotics
 
 ## Quickstart
 
+On Windows PowerShell, from the repository root:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r prototype/requirements.txt
+Copy-Item .env.example .env
+.\.venv\Scripts\python.exe -m pytest tests -q
+.\.venv\Scripts\python.exe -m prototype.server
+```
+
+The tests use synthetic/local fixtures and require no API keys. Fill in `.env`
+only when you want to run a live provider; the server reports missing credentials.
+The commands use the environment's Python directly, so PowerShell activation
+policy does not need to be changed. The requirements include the sales
+research module's `requests` and `beautifulsoup4` imports used by the full suite.
+
+On a shell with Python already available:
+
 ```bash
 cp .env.example .env
 # fill in your API keys

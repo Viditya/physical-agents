@@ -80,6 +80,10 @@ class TestRender:
         with pytest.raises(UnsupportedDocumentError):
             render_to_png(sample_pdf, str(tmp_path / "out.png"), page_number=5)
 
+    def test_negative_page_is_rejected(self, sample_pdf, tmp_path):
+        with pytest.raises(UnsupportedDocumentError):
+            render_to_png(sample_pdf, str(tmp_path / "out.png"), page_number=-1)
+
     def test_page_count(self, sample_pdf, sample_png):
         assert page_count(sample_pdf) == 1
         assert page_count(sample_png) == 1
@@ -120,6 +124,30 @@ class TestOverlay:
         assert drawn == 1
         with Image.open(output) as image:
             assert image.size == (240, 160)
+
+    @pytest.mark.parametrize(
+        "coordinate",
+        [float("nan"), float("inf"), float("-inf"),
+         "NaN", "Infinity", "-Infinity", "1e309", 10 ** 1000],
+        ids=["nan", "positive-inf", "negative-inf", "nan-string",
+             "inf-string", "negative-inf-string", "overflow-string", "oversized-int"],
+    )
+    def test_nonfinite_or_unrepresentable_coordinate_is_skipped(
+        self, sample_png, tmp_path, coordinate
+    ):
+        points = [
+            {"point": [coordinate, 500], "label": "invalid"},
+            {"point": [500, coordinate], "label": "invalid"},
+            {"point": [500, 500], "label": "valid"},
+        ]
+        assert draw_points(sample_png, points, str(tmp_path / "overlay.png")) == 1
+
+    def test_extreme_finite_coordinates_clamp_before_pixel_conversion(self, sample_png, tmp_path):
+        Image.new("RGB", (2400, 1600), (200, 200, 200)).save(sample_png)
+        output = str(tmp_path / "overlay.png")
+        assert draw_points(sample_png, [{"point": [1.79e308, -1.79e308]}], output) == 1
+        with Image.open(output) as image:
+            assert image.getpixel((0, 1599)) != (200, 200, 200)
 
 
 class TestServer:
@@ -332,3 +360,29 @@ class TestServer:
         assert response.status_code == 200
         assert payload["overlay_url"]
         assert "could not be updated" in payload["warning"]
+
+    def test_invalid_provider_coordinates_do_not_lose_the_valid_overlay(
+        self, client, sample_png, monkeypatch
+    ):
+        class Provider:
+            def describe_image(self, image_path, prompt):
+                return {
+                    "provider": "fake",
+                    "points": [
+                        {"point": ["NaN", 500], "label": "invalid"},
+                        {"point": [500, "Infinity"], "label": "invalid"},
+                        {"point": [500, 500], "label": "valid"},
+                    ],
+                    "raw_text": "synthetic offline response",
+                }
+
+        monkeypatch.setattr(server, "_load_provider", lambda _: Provider())
+        with open(sample_png, "rb") as handle:
+            response = client.post(
+                "/api/analyze", data={"provider": "gemini", "file": (handle, "drawing.png")},
+                content_type="multipart/form-data",
+            )
+        assert response.status_code == 200
+        payload = response.get_json()
+        assert payload["points_drawn"] == 1
+        assert client.get(payload["overlay_url"]).status_code == 200

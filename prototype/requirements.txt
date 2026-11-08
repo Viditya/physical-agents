@@ -5,3 +5,5 @@ flask
 pymupdf
 pillow
 pytest
+requests
+beautifulsoup4

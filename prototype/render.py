@@ -35,6 +35,8 @@ def render_to_png(source_path: str, output_path: str, page_number: int = 0) -> s
 
     if extension == PDF_EXTENSION:
         with pymupdf.open(source_path) as document:
+            if page_number < 0:
+                raise UnsupportedDocumentError("Page index must be nonnegative (zero-based).")
             if page_number >= document.page_count:
                 raise UnsupportedDocumentError(
                     f"Page {page_number + 1} requested but the document has "

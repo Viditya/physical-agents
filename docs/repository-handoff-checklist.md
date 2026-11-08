@@ -37,3 +37,35 @@ distinct milestones, not implied by a working parser.
 Do not move customer files or publish raw results as part of this handoff.
 Extract a shared module only after both repositories demonstrate a concrete
 need; no cross-repository runtime dependency is currently required.
+
+## 2026-11-08 prototype validation follow-up
+
+- [x] Work isolated in `physical-agents-demo-validation` on
+  `fix/demo-validation-and-env`, based on remote `main` (`8557e18`). The existing
+  `feature/figure-5-1-and-env-setup` worktree was left on its original branch.
+- [x] Baseline: 55 offline tests passed in the existing Python environment.
+- [x] Reproduced overlay failures from non-finite coordinates and oversized
+  integers, and negative PDF indices selecting the last page unintentionally.
+- [x] Overlay now skips invalid values while retaining valid points; extreme
+  finite coordinates are clamped before pixel conversion. Negative PDF indices
+  receive a clear zero-based-index error.
+- [x] Added the missing `.env.example`, local-artifact ignores and explicit
+  Windows setup instructions. Included `requests` and `beautifulsoup4`, which
+  the sales module imports during full-suite collection.
+- [x] Fresh Python 3.12 environment installed only from
+  `prototype/requirements.txt`; `pip check` found no broken requirements.
+- [x] Fresh-environment offline suite: **66 passed**. Added cases exercise the
+  rendering boundary and HTTP response with synthetic invalid provider points.
+- [x] Real local process smoke: `/` and `/api/config` returned HTTP 200; public
+  samples were available. The owned smoke-test process was stopped afterward.
+- [ ] Live provider/camera experiment: not performed. No Gemini/Azure model
+  request or Claude execution is established by these offline checks.
+- [ ] Restore/locate the role and experiment-skill entry points referenced by
+  `AGENTS.md` before a new physical-agent experiment. Neither `.github/agents/`
+  nor the referenced `.github/skills/`/`.claude/skills/` entry points is present
+  in this checkout.
+- [ ] User reviews and merges this follow-up. No automatic merge.
+- [ ] Publish topic branch and open PR after GitHub write access is restored.
+  On 2026-11-08 both local HTTPS push and the connected GitHub integration's
+  branch-create request returned HTTP 403. Implementation is committed locally;
+  no remote topic branch or PR was created by this pass.
